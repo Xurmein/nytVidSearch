@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NYT video search</title>
+    <link href="nyt.css" rel="stylesheet">
+</head>
+<body>
+    <h1>One-word NYT Video Search</h1>
+
+    <div class="wrapper">
+        <div class="controls">
+            <form><!-- search form -->
+                <p>
+                    <label for="search">Enter a SINGLE search term (required): </label>
+                    <input type="text" id="search" class="search" required>
+                </p>
+                <p>
+                    <label for="end-date">Enter end date (YYYYMMDD): </label> 
+                    <input type="date" id="end-date" class="end-date" pattern="[0-9]{8}">
+                </p>
+                <p>
+                    <button class="submit">Bada-bing!</button>
+                </p>
+            </form>
+        </div>
+        <div class ="results">  <!-- Results-->
+            <nav>    <!-- for results -->
+                <button class="prev">Last 10</button>
+                <button class="next">Next 10</button>
+            </nav>  
+            <section>
+                <!-- video selection  -->
+            </section>          
+        </div>
+    </div>
+   <script type="text/javascript" src="nyt.js"></script> 
+</body>
+</html>
