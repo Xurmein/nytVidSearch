@@ -1,20 +1,21 @@
-const baseURL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json';
-const key = 'abc4bbfaaef34c9aa5870901ca95db9d';
-let url;
+////////////////////////////////////////////////////////////////////////talk-through notes
+const baseURL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json'; //maintains api URL throughout code
+const key = 'abc4bbfaaef34c9aa5870901ca95db9d'; //maintains personal api key for search
+let url; //allows url to change according search terms
 
-const searchTerm = document.querySelector('.search'); //search form
-const startDate = document.querySelector('.start-date');
-const endDate = document.querySelector('.end-date');
-const searchForm = document.querySelector('form');
-const subBTN = document.querySelector('.submit');
+const searchTerm = document.querySelector('.search'); //search form            
+const startDate = document.querySelector('.start-date');                   //           > f/m line 6
+const endDate = document.querySelector('.end-date');                       //           | 
+const searchForm = document.querySelector('form');                         //various displayed page elements  
+const subBTN = document.querySelector('.submit');                          //           |
+                                                                           //           > to line 16
+const nxtBTN = document.querySelector('.next');  //results navigation           
+const prvBTN = document.querySelector('.prev');                            
+const nav = document.querySelector('nav');                                      
 
-const nxtBTN = document.querySelector('.next');  //results navigation
-const prvBTN = document.querySelector('.prev');
-const nav = document.querySelector('nav');
+const section = document.querySelector('section'); //results section                   
 
-const section = document.querySelector('section'); //results section
-
-nav.style.display = 'none'; 
+nav.style.display = 'none';                                               
 
 let pageNumber = 0;  //pagination
 console.log('Page Number: ', pageNumber);
